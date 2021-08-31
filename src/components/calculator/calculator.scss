@@ -1,0 +1,110 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 50px;
+}
+
+.calculator {
+  background-color: white;
+  width: 400px;
+  box-shadow: 0px 0px 20px 2px;
+}
+
+.row {
+  display: flex;
+}
+
+.toggle-theme-button {
+  cursor: pointer;
+  background-color: #ddd;
+  font-size: 16px;
+  padding: 10px;
+  color: black;
+  padding: 16px 32px;
+  transition: 0.3s;
+  &:hover {
+    background-color: #3e8e41;
+    color: white;
+  }
+}
+
+.theme-name {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+// THEMES
+
+.default-theme {
+  .display {
+    background-color: rgb(50, 30, 12);
+  }
+  .button {
+    border: 1px solid rgba(50, 30, 0, 0.8);
+    color: white;
+  }
+  .button-primary {
+    background-color: rgb(145, 135, 122);
+    &:hover {
+      filter: brightness(120%);
+    }
+  }
+  .button-secondary {
+    background-color: rgb(112, 99, 82);
+    &:hover:not(.active) {
+      filter: brightness(120%);
+    }
+    &.active {
+      filter: brightness(120%);
+    }
+  }
+  .button-accent {
+    background-color: #ff9f0c;
+    &:hover:not(.active) {
+      filter: brightness(80%);
+    }
+    &.active {
+      filter: brightness(80%);
+    }
+  }
+}
+
+.alt-theme {
+  .display {
+    background-color: rgb(55, 55, 55);
+  }
+  .button {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    color: black;
+  }
+  .button-primary {
+    background-color: rgb(169, 169, 169);
+    &:hover {
+      filter: brightness(120%);
+    }
+  }
+  .button-secondary {
+    background-color: rgb(142, 142, 142);
+    &:hover:not(.active) {
+      filter: brightness(120%);
+    }
+    &.active {
+      filter: brightness(120%);
+    }
+  }
+  .button-accent {
+    background-color: #cc0000;
+    color: white;
+    &:hover:not(.active) {
+      filter: brightness(80%);
+    }
+    &.active {
+      filter: brightness(80%);
+    }
+  }
+}
